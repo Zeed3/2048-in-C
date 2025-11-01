@@ -348,8 +348,7 @@ void highScore() {
     system("cls");
     FILE *fptr = fopen("highscore.txt", "r");
     if (fptr == NULL) {
-        printf("Error opening file.\n");
-        return;
+        fptr = fopen("highscore.txt", "w");
     }
 
     struct highscoreData highscore[100];
